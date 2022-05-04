@@ -12,7 +12,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity(name = "Cliente")
+@Entity(name = "cliente")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -35,7 +35,7 @@ public class Cliente {
     @Column(name = "data_aniversario")
     private Date aniversario;
 
-    @Column(name = "Endereço")
+    @Column(name = "Endereco")
     private String endereco;
 
     @Column(name = "Telefone")
