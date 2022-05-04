@@ -37,10 +37,6 @@
 
 # Author
 
-👤 **Caio Santos**
-
-- Github: [@zCaioSantos](https://github.com/zCaioSantos)
-
 👤 **Gabriela Duques**
 
 - Github: [@GabrielaDuques](https://github.com/gabrieladuques)
