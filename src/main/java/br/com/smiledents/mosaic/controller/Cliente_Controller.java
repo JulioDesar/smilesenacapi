@@ -34,6 +34,21 @@ public class Cliente_Controller {
         return db.findById(id);
     }
 
+    @GetMapping(path = "/buscaNome")
+    public List<Cliente> listByName(String nome) {
+        return db.findByNome(nome);
+    }
+
+    @GetMapping(path = "/buscaNomeParcial")
+    public List<Cliente> listByNameParcial(String nome) {
+        return db.findByParcialNome(nome);
+    }
+
+    @GetMapping(path = "/buscaCpf")
+    public List<Cliente> listByCpfParcial(long cpf) {
+        return db.findByParcialCpf(cpf);
+    }
+
     @PostMapping(path = "/")
     public Cliente saveCliente(@RequestBody Cliente cli) {
         return db.save(cli);
