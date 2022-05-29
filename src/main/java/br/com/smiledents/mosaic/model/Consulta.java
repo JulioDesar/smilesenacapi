@@ -1,6 +1,6 @@
 package br.com.smiledents.mosaic.model;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,6 +11,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 import br.com.smiledents.mosaic.model.Enum.Status;
 import lombok.AllArgsConstructor;
@@ -28,8 +32,9 @@ public class Consulta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     @Column(name = "Data_consulta")
-    private Date data_consulta;
+    private LocalDateTime data_consulta;
 
     @Column(name = "Descricao")
     private String descricao;

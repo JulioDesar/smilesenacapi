@@ -1,6 +1,6 @@
 package br.com.smiledents.mosaic.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -33,7 +33,7 @@ public class Cliente {
     private String email;
 
     @Column(name = "data_aniversario")
-    private Date aniversario;
+    private LocalDate aniversario;
 
     @Column(name = "Endereco")
     private String endereco;
