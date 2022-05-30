@@ -45,7 +45,7 @@ public class Cliente_Controller {
     }
 
     @GetMapping(path = "/buscaCpf")
-    public List<Cliente> listByCpfParcial(long cpf) {
+    public Optional<Cliente> listByCpfParcial(long cpf) {
         return db.findByParcialCpf(cpf);
     }
 

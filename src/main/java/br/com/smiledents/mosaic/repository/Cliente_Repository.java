@@ -1,6 +1,7 @@
 package br.com.smiledents.mosaic.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -15,6 +16,6 @@ public interface Cliente_Repository extends JpaRepository<Cliente, Integer> {
     List<Cliente> findByParcialNome(String nome);
 
     @Query("select c from cliente c where CPF like %?1%")
-    List<Cliente> findByParcialCpf(Long cpf);
+    Optional<Cliente> findByParcialCpf(Long cpf);
     
 }

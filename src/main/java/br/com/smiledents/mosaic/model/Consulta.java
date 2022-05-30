@@ -14,8 +14,6 @@ import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 import br.com.smiledents.mosaic.model.Enum.Status;
 import lombok.AllArgsConstructor;
 import lombok.Data;
